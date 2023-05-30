@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./default.css" />
+    <script src="./index.js" defer></script>
     <title>Mini-games</title>
   </head>
   <body>
@@ -33,25 +34,39 @@
     </a>
   </section>
 
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const cards = document.querySelectorAll(".card");
+  <div class="popupCard hidden"> 
+    <div>
+      <img src="./pictures/ghady.jpg" alt="ghady">
+      <span>Ghadi El Hage</span>
+      <span>Pulic Speaker</span>
+    </div>
+    <div>
+      <img src="./pictures/Charbel.jpeg" alt="charbel">
+      <span>Charbel Bou Ghazale</span>
+      <span>Software Engineer</span>
+    </div>
+  </div>
 
-        cards.forEach((card, index) => {
-          card.style.animationDelay = `${index * 0.1}s`;
+  <div class="popupCard form hidden">
+    <form action="#" class="loginForm">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email..." required>
+      </div>
 
-          card.addEventListener("mouseover", () => {
-            card.classList.remove("animate");
-          });
+      <div>
+        <label for="password">Password</label>      
+        <input type="password" id="password" placeholder="password" required>
+      </div> 
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
-          card.addEventListener("mouseout", () => {
-            card.classList.add("animate");
-          });
+  <div class="popupCard success hidden"> 
+      <h1>SUCCESS!</h1>
+  </div>
 
-          // Trigger the mouseout event to start the animation
-          card.dispatchEvent(new Event("mouseout"));
-        });
-      });
-    </script>
+  <span class="blackBG hidden"></span>
+
   </body>
 </html>
