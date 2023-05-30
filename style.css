@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --orange: #f2c14e;
+  --winning-blocks: #2d414b;
+}
+body {
+  color: var(--orange) !important;
+  font-family: "Finger Paint", cursive !important;
+}
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+}
+.container {
+  padding: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #37505c;
+}
+#gameboard {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+/* it count each 3 child (square) and remove border right */
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+/* it count number of child (till 6) and remove border bottom after them */
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--orange);
+  color: #333;
+  border-color: var(--orange);
+  font-size: 18px;
+  transition: 200ms transform;
+  font-weight: 600;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.container-flex {
+  display: flex;
+  max-width: 1900px;
+  flex-direction: column;
+  margin: 0 auto;
+  /* background-color: #fff; */
+  background-color: #37505c;
+}
+aside {
+  padding: 10px;
+}
+.about-me {
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.about-me img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}

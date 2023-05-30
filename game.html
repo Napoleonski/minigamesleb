@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="changeAbout()">
+    <div class="container">
+      <h1 id="playerText">Tic Tac Toe</h1>
+      <button id="restartBtn">Restart</button>
+
+      <div id="gameboard">
+        <div class="box" id="0"></div>
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+      </div>
+    </div>
+    <section class="container-flex">
+      <aside class="sidebar">
+        <div class="about-me hidden" id="first-about">
+          <h1>About the Authors</h1>
+          <img
+            src="./pictures/photo_2023-01-07_15-42-56.jpg"
+            alt="author image"
+          />
+          <h2 class="about-name">Ghadi EL Hage</h2>
+          <small>FullStack Dev</small>
+          <p class="about-me-bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            accusantium explicabo laudantium placeat vel tempora sed ducimus,
+            ipsam quos, repellendus optio ipsa et, exercitationem dolores
+            corrupti pariatur doloribus reiciendis esse.
+          </p>
+        </div>
+        <div class="about-me" id="second-about">
+          <h1>About the Authors</h1>
+          <img
+            src="./pictures/WhatsApp Image 2023-05-30 at 11.33.54 AM.jpeg"
+            alt="author image"
+          />
+          <h2 class="about-name">Christine Saad</h2>
+          <small>FullStack Dev</small>
+          <p class="about-me-bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            accusantium explicabo laudantium placeat vel tempora sed ducimus,
+            ipsam quos, repellendus optio ipsa et, exercitationem dolores
+            corrupti pariatur doloribus reiciendis esse.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <script src="/gameLogic.js"></script>
+    <script src="/function.js"></script>
+  </body>
+</html>
