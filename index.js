@@ -7,7 +7,6 @@ let successPopup = document.querySelector('.success');
 let blackBG = document.querySelector('.blackBG');
 let login = document.querySelector('.navigation span:nth-of-type(2)'); 
 
-// must have generic code to open and close the popups
 function enableBg(){
     blackBG.classList.remove('hidden');
     blackBG.classList.add('active');
@@ -32,7 +31,7 @@ about.addEventListener('click',()=>{
 
 login.addEventListener('click',()=>{
 
-    if(AboutpopupCard.classList.contains('active')){
+    if(loginForm.classList.contains('active')){
         disableBg();
         loginForm.classList.remove('active');
         loginForm.classList.add('hidden');
