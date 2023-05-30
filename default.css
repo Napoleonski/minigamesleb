@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'lato';
+}
+
+@font-face {
+  font-family: lato;
+  src: url('./fonts/helvetica.ttf');
 }
 
 :root{
@@ -12,8 +18,10 @@
   --oliveColor:#1F271B;
 }
 
-body {
-  background-color: var(--indigoColor);
+html{
+  background-image: linear-gradient(to bottom, var(--indigoColor), var(--redColor));
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .navigation{
@@ -41,65 +49,50 @@ body {
   transition: .2s;
   cursor: pointer;
 }
+
 .navigation span:hover{
   background-color: var(--yellowGlow);
   color: var(--oliveColor);
   transform: scale(110%);
   transition: .2s;
 }
+.navigation span:active{
+  background-color: var(--oliveColor);
+  color: var(--whiteColor);
+  transform: scale(105%);
+  transition: .2s;
+}
 
-
-.main {
+.main{
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  height: 100vh;  
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap; 
   justify-content: center;
-  align-items: center;
+  width: 90%;
+  margin: 10rem auto;
+  gap: 2rem;
+  padding: 1rem;
 }
 
-.card {
-  width: 110px;
-  height: 150px;
-  margin: 5px;  
-  padding: 8px;
-  background-color: white;
-  border-radius: 8px;
-  transition: 1s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px;
+.main a{
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
-.gallery a:nth-child(1) .card {
-  background-color: #b881ff;
+.main div{
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 5rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: .2s;
 }
 
-.gallery a:nth-child(2) .card {
-  background-color: #ff9950;
-  color: #da6716;
+.main div:hover{
+  transform: translateY(-.5rem);
+  transition: .2s;
 }
 
-.gallery a:nth-child(3) .card {
-  background-color: #aaec8a;
-}
-
-.gallery a:nth-child(4) .card {
-  background-color: #ed6a5e;
-  color: #f0210e;
-}
-.card:hover {
-  transform: translateY(-16px);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.card:hover ~ .card {
-  left: 55px;
-}
-
- 
- 
